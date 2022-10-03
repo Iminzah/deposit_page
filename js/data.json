@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "1cc2d716-af4c-4962-a1a5-fe2dd72d07fc",
+		"name": "Deposit Page",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4484633"
+	},
+	"item": [
+		{
+			"name": "Search Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bo-stm11.btobet.games/Home/GetSearchResults?text=258858619593",
+					"protocol": "https",
+					"host": [
+						"bo-stm11",
+						"btobet",
+						"games"
+					],
+					"path": [
+						"Home",
+						"GetSearchResults"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "258858619593"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Deposit",
+			"request": {
+				"auth": {
+					"type": "edgegrid"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"ClientID\": 1001, \"PaymentMethodID\": 691, \"Username\": \"258858616593\", \"Email\": null, \"UserID\": null, \"Amount\": 100.0, \"Currency\": \"MZN\", \"PspId\": \"12314591\", \"Language\": \"en\", \"WithdrawalID\": null, \"PosId\": \"15\", \"CashierId\": \"14\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://payment-bo-stm11.btobet.games/Services/GeneralPayment.svc/DepositValidate",
+					"protocol": "https",
+					"host": [
+						"payment-bo-stm11",
+						"btobet",
+						"games"
+					],
+					"path": [
+						"Services",
+						"GeneralPayment.svc",
+						"DepositValidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Deposit",
+			"request": {
+				"auth": {
+					"type": "edgegrid"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"ClientID\": 1001, \"PaymentMethodID\": 691, \"Username\": \"258858616593\", \"Email\": null, \"UserID\": null, \"Amount\": 100.0, \"Currency\": \"MZN\", \"PspId\": \"12314591\", \"Language\": \"en\", \"WithdrawalID\": null, \"PosId\": \"15\", \"CashierId\": \"14\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://payment-bo-stm11.btobet.games/Services/GeneralPayment.svc/DepositProcess",
+					"protocol": "https",
+					"host": [
+						"payment-bo-stm11",
+						"btobet",
+						"games"
+					],
+					"path": [
+						"Services",
+						"GeneralPayment.svc",
+						"DepositProcess"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="css/intlTelInput.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <script type="text/javascript" src="https://api.chargeio.com/assets/api/v1/chargeio.min.js"></script>
+   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.min.css} " />
+
+  <!-- font awesome-->
+  <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} " />
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"></script>
+<script type="text/javascript" src="data.json"></script>
+<script  type="text/javascript" src="./js/index.js"></script>  
+
+</head>
+<body>
+    <div class="container-fluid px-0" id="bg-div">
+        <div class="row justify-content-center">
+            <div class="col-lg-9col-12">
+                <div class="card card0">
+                    <div class="d-flex" id="wrapper">
+                        <!-- Sidebar -->
+                        
+                        <div class="bg-light border-right" id="sidebar-wrapper">
+                            
+                    
+                            <div class="sidebar-heading pt-5 pb-4"><strong>PAY WITH</strong></div>
+                            <div class="list-group list-group-flush"> <a data-toggle="tab" href="#menu1" id="tab1" class="tabs list-group-item bg-light">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-home"></div> &nbsp;&nbsp; MPESA
+                                    </div>
+                                </a> <a data-toggle="tab" href="#menu2" id="tab2" class="tabs list-group-item active1">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-credit-card"></div> &nbsp;&nbsp; EMOLA
+                                    </div>
+                                </a>  </div>
+                               
+                        
+                                 </div> <!-- Page Content -->
+                                            <div id="page-content-wrapper">
+                                                <div class="row pt-3" id="border-btm">
+                                                    <div class="col-4"> <button class="btn btn-success mt-4 ml-3 mb-3" id="menu-toggle">
+                                                            <div class="bar4"></div>
+                                                            <div class="bar4"></div>
+                                                            <div class="bar4"></div>
+                                                        </button> </div>
+                                                    <div class="col-8">
+                                                        <div class="row justify-content-right">
+                                                            <div class="col-12">
+                                                                <p class="mb-0 mr-4 mt-4 text-right">customer@email.com</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row justify-content-right">
+                                                            <div class="col-12">
+                                                                <p class="mb-0 mr-4 text-right">Pay <span class="top-highlight">$ </span> </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="tab-content">
+                                                    <div id="menu1" class="tab-pane">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-11 col-12">
+                                                                <div class="form-card">
+                                                                    <h3 class="mt-0 mb-4 text-center">Enter details to pay</h3>
+                                                                    <form  class="needs-validation" novalidate=""  action="">
+                                                                        <div class="row">
+                                                                         
+                                                                            <div class="col-12">
+                                                                                <label>Send to</label>
+                                                                                <div class="form-group"> <input type="tel" id="phone_number" class="form-control"  name="phone_number"  placeholder="+258********" value="" minlength="5" maxlength="9" required=""> </div>
+                                                                                <div class="invalid-feedback"> Valid last name is required. </div>
+                                                                            </div>
+                                                                            
+                                                                            
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <label>Amount</label>
+                                                                                <div class="form-group"> <input type="number" name="number" id="number" class="form-control" placeholder="10" required="">  </div>
+                                                                            </div>
+                                                                            <div class="col-12">
+                                                                                <label>From</label>
+                                                                                <div class="form-group"> <input type="tel" id="mpesa_number"  name="mpesa_number" class="form-control" placeholder="+258*********" maxlength="9" required="">  </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class=" col-12"> <input type="submit" value="Deposit" class="btn btn-success placeicon"> </div>
+                                                                        </div>
+                                                                        
+                                                                    </form>
+                                                                    <div class="alert alert-info" style="display: none;"></div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="menu2" class="tab-pane in active">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-11 col-12">
+                                                                <div class="form-card">
+                                                                    <h3 class="mt-0 mb-4 text-center">Enter your details to pay</h3>
+                                                                    <form   class="needs-validation" novalidate="" >
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                            
+                                                                                <label>Send to</label>
+                                                                                <div class="form-group"> <input type="tel" name="enumber" id="enumber"  placeholder="+258********"  class="form-control" data-rule="" maxlength="9" required/> </div>
+                                                                            
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <label>Amount</label>
+                                                                                <div class="form-group"> <input type="number" name="number" id="number"  placeholder="10"  class="form-control" required/> </div>
+                                                                                <div class="invalid-feedback"> Please add an Amount  </div>
+
+
+                                                                            </div>
+                                                                        
+                                                                    
+                                                                            <div class="col-12">
+                                                                                <label>From</label>
+                                                                                <div class="form-group"> <input type="tel" id="emola_number" name="emola_number" placeholder="+258********" class="form-control"  minlength="5" maxlength="9" required/> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        <div class="row">
+                                                                            <div class="col-md-12"> <input type="submit" value="Deposit" class="btn btn-success placeicon" > </div>
+                                                                        </div>
+                                                                        
+                                                                    </form>
+                                                                    <div class="alert alert-info" style="display: none;"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+</body>
+<script>
+(function () {
+  'use strict'
+
+  window.addEventListener('load', function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  }, false)
+}())
+
+const phoneInputField = document.querySelector("#phone_number");
+const phoneInputField2 = document.querySelector("#enumber");
+
+const phoneInputField3= document.querySelector("#mpesa_number");
+const phoneInputField4 = document.querySelector("#emola_number");
+
+
+const phoneInput = window.intlTelInput(phoneInputField, {
+    
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+const phoneInput2 = window.intlTelInput(phoneInputField2, {
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+const phoneInput3 = window.intlTelInput(phoneInputField3, {
+    
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+const phoneInput4 = window.intlTelInput(phoneInputField4, {
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+$(function() {
+  $("#phone_number").change(function() {
+    let countryCode = $(this).find('option:selected').data('country-code');
+    let value = "+" + $(this).val();
+    $('#phone_number').val(value).intlTelInput("setCountry", countryCode);
+  });
+  
+  var code = "+258";
+  $('#phone_number ').val(code).intlTelInput();
+});
+$(function() {
+  $("#enumber").change(function() {
+    let countryCode = $(this).find('option:selected').data('country-code');
+    let value = "+" + $(this).val();
+    $('#enumber').val(value).intlTelInput("setCountry", countryCode);
+  });
+  
+  var code = "+258";
+  $('#enumber').val(code).intlTelInput();
+});
+$(function() {
+  $("#mpesa_number").change(function() {
+    let countryCode = $(this).find('option:selected').data('country-code');
+    let value = "+" + $(this).val();
+    $('#mpesa_number').val(value).intlTelInput("setCountry", countryCode);
+  });
+  
+  var code = "+258";
+  $('#mpesa_number ').val(code).intlTelInput();
+});
+$(function() {
+  $("#emola_number").change(function() {
+    let countryCode = $(this).find('option:selected').data('country-code');
+    let value = "+" + $(this).val();
+    $('#emola_number').val(value).intlTelInput("setCountry", countryCode);
+  });
+  
+  var code = "+258";
+  $('#emola_number').val(code).intlTelInput();
+});
+
+
+
+
+
+
+
+
+
+</script>
+</html>
+
+
+
