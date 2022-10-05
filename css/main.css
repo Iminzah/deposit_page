@@ -1,5 +1,9 @@
 *{margin: 0;padding: 0}
 body{overflow-x: hidden;
+  
+    overflow-y:hidden;
+  
+  
     background-color: #000000}
 #bg-div{margin: 0;margin-top:100px;margin-bottom:100px}
 #border-btm{padding-bottom: 20px;margin-bottom: 0px;box-shadow: 0px 35px 2px -35px lightgray}#test{margin-top: 0px;margin-bottom: 40px;border: 1px solid #FFE082;border-radius: 0.25rem;width: 30px;height: 30px;background-color: #FFECB3}
