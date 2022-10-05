@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    -->
 
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet"   href="https://use.fontawesome.com/releases/v5.8.1/css/all.css
+    ">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <link rel="stylesheet" href="css/intlTelInput.css">
@@ -15,11 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
    <script type="text/javascript" src="https://api.chargeio.com/assets/api/v1/chargeio.min.js"></script>
-   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.min.css} " />
-
-  <!-- font awesome-->
-  <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} " />
-
+   
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
@@ -31,32 +29,56 @@
 
 </head>
 <body>
-    <div class="container-fluid px-0" id="bg-div">
+    <div class="container-fluid px-0  shadow-sm" id="bg-div">
         <div class="row justify-content-center">
-            <div class="col-lg-9col-12">
+            <div class=" col-lg-9col-lg-12">
                 <div class="card card0">
                     <div class="d-flex" id="wrapper">
+                        
                         <!-- Sidebar -->
                         
-                        <div class="bg-light border-right" id="sidebar-wrapper">
+                        <div class="bg-light border-right " id="sidebar-wrapper">
                             
                     
-                            <div class="sidebar-heading pt-5 pb-4"><strong>PAY WITH</strong></div>
+                            <div class="sidebar-heading pt-5 pb-4 shadow-sm "><strong>PAY WITH</strong></div>
                             <div class="list-group list-group-flush"> <a data-toggle="tab" href="#menu1" id="tab1" class="tabs list-group-item bg-light">
-                                    <div class="list-div my-2">
+                                    <div class="list-div my-2 shadow-sm">
                                         <div class="fa fa-home"></div> &nbsp;&nbsp; MPESA
                                     </div>
                                 </a> <a data-toggle="tab" href="#menu2" id="tab2" class="tabs list-group-item active1">
-                                    <div class="list-div my-2">
+                                    <div class="list-div my-2 shadow-sm">
                                         <div class="fa fa-credit-card"></div> &nbsp;&nbsp; EMOLA
                                     </div>
-                                </a>  </div>
+                                </a> 
+                                
+                             </div>
+                                <nav class=" navbar navbar-expand-lg 
+        navbar-light bg-white  fixed-top py-lg-0 shadow-sm ">
+  
+        <a class="navbar-brand" href="#">
+  
+            <!-- Add logo with size of 90*80 -->
+            <img src=
+"./img/logo.jpeg"
+            width="90" height="80" alt="">
+        </a>
                                
                         
                                  </div> <!-- Page Content -->
-                                            <div id="page-content-wrapper">
+                                            <div id="page-content-wrapper ">
                                                 <div class="row pt-3" id="border-btm">
-                                                    <div class="col-4"> <button class="btn btn-success mt-4 ml-3 mb-3" id="menu-toggle">
+                                                    <div class="col-4"> 
+                                                        <nav class=" navbar navbar-expand-lg 
+        navbar-light bg-white py-lg-0  " id="menu-toggle">
+  
+        <a class="navbar-brand" href="#">
+  
+            <!-- Add logo with size of 90*80 -->
+            <img src=
+"./img/logo.jpeg"
+            width="90" height="80" alt="">
+        </a>
+                               
                                                             <div class="bar4"></div>
                                                             <div class="bar4"></div>
                                                             <div class="bar4"></div>
@@ -64,7 +86,7 @@
                                                     <div class="col-8">
                                                         <div class="row justify-content-right">
                                                             <div class="col-12">
-                                                                <p class="mb-0 mr-4 mt-4 text-right">customer@email.com</p>
+                                                                <p class="mb-0 mr-4 mt-4 text-right  ">customer@email.com</p>
                                                             </div>
                                                         </div>
                                                         <div class="row justify-content-right">
@@ -75,18 +97,18 @@
                                                     </div>
                                                 </div>
                                                
-                                                <div class="tab-content">
-                                                    <div id="menu1" class="tab-pane">
+                                                <div class="tab-content shadow-sm">
+                                                    <div id="menu1" class="tab-pane ">
                                                         <div class="row justify-content-center">
                                                             <div class="col-11 col-12">
-                                                                <div class="form-card">
-                                                                    <h3 class="mt-0 mb-4 text-center">Enter details to pay</h3>
+                                                                <div class="form-card ">
+                                                                    <h3 class="mt-0 mb-4 text-center shadow-sm">Enter details to pay</h3>
                                                                     <form  class="needs-validation" novalidate=""  action="">
                                                                         <div class="row">
                                                                          
                                                                             <div class="col-12">
                                                                                 <label>Send to</label>
-                                                                                <div class="form-group"> <input type="tel" id="phone_number" class="form-control"  name="phone_number"  placeholder="+258********" value="" minlength="5" maxlength="9" required=""> </div>
+                                                                                <div class="form-group"> <input type="tel" id="phone_number" class="form-control btn-block shadow-sm"  name="phone_number"  placeholder="+258********" value="" minlength="5" maxlength="9" required=""> </div>
                                                                                 <div class="invalid-feedback"> Valid last name is required. </div>
                                                                             </div>
                                                                             
@@ -95,17 +117,17 @@
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <label>Amount</label>
-                                                                                <div class="form-group"> <input type="number" name="number" id="number" class="form-control" placeholder="10" required="">  </div>
+                                                                                <div class="form-group"> <input type="number" name="number" id="number" class="form-control btn-block shadow-sm" placeholder="10" required="">  </div>
                                                                             </div>
                                                                             <div class="col-12">
                                                                                 <label>From</label>
-                                                                                <div class="form-group"> <input type="tel" id="mpesa_number"  name="mpesa_number" class="form-control" placeholder="+258*********" maxlength="9" required="">  </div>
+                                                                                <div class="form-group"> <input type="tel" id="mpesa_number"  name="mpesa_number" class="form-control btn-block shadow-sm" placeholder="+258*********" maxlength="9" required="">  </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row">
-                                                                            <div class=" col-12"> <input type="submit" value="Deposit" class="btn btn-success placeicon"> </div>
-                                                                        </div>
+                                                                        <br>
                                                                         
+                                                                        <div class="card-footer"><button type="submit" class="subscribe btn btn-success btn-block shadow-sm">Confirm Payment</button></div>
+
                                                                     </form>
                                                                     <div class="alert alert-info" style="display: none;"></div>
 
@@ -124,7 +146,7 @@
                                                                             <div class="col-12">
                                                                             
                                                                                 <label>Send to</label>
-                                                                                <div class="form-group"> <input type="tel" name="enumber" id="enumber"  placeholder="+258********"  class="form-control" data-rule="" maxlength="9" required/> </div>
+                                                                                <div class="form-group"> <input type="tel" name="enumber" id="enumber"  placeholder="+258********"  class="form-control  shadow-sm" data-rule="" maxlength="9" required/> </div>
                                                                             
                                                                             </div>
                                                                             
@@ -132,7 +154,7 @@
                                                                         <div class="row">
                                                                             <div class="col-12">
                                                                                 <label>Amount</label>
-                                                                                <div class="form-group"> <input type="number" name="number" id="number"  placeholder="10"  class="form-control" required/> </div>
+                                                                                <div class="form-group"> <input type="number" name="number" id="number"  placeholder="10"  class="form-control shadow-sm" required/> </div>
                                                                                 <div class="invalid-feedback"> Please add an Amount  </div>
 
 
@@ -141,14 +163,13 @@
                                                                     
                                                                             <div class="col-12">
                                                                                 <label>From</label>
-                                                                                <div class="form-group"> <input type="tel" id="emola_number" name="emola_number" placeholder="+258********" class="form-control"  minlength="5" maxlength="9" required/> </div>
+                                                                                <div class="form-group"> <input type="tel" id="emola_number" name="emola_number" placeholder="+258********" class="form-control shadow-sm"  minlength="5" maxlength="9" required/> </div>
                                                                             </div>
                                                                         </div>
+                                                                        <br>
                                                                         
-                                                                        <div class="row">
-                                                                            <div class="col-md-12"> <input type="submit" value="Deposit" class="btn btn-success placeicon" > </div>
-                                                                        </div>
-                                                                        
+                                                                        <div class="card-footer"><button type="submit" class="subscribe btn btn-success btn-block shadow-sm">Confirm Payment</button></div>
+
                                                                     </form>
                                                                     <div class="alert alert-info" style="display: none;"></div>
                                                                 </div>
@@ -259,6 +280,3 @@ $(function() {
 
 </script>
 </html>
-
-
-
